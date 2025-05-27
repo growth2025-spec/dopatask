@@ -1,0 +1,104 @@
+📝 Product Requirements Document (PRD)
+🧠 Nombre del Proyecto
+DopaTasks – Gamified Productivity App with Pomodoro & Dopamine Rewards
+
+1. 🔍 Visión
+Crear una aplicación web moderna y minimalista para ayudar a los usuarios a aumentar su productividad mediante la técnica Pomodoro, gestión de objetivos y tareas, y un sistema visual de recompensas (“dopamine shots”) por tareas cumplidas. Está diseñada para personas que buscan motivarse de manera saludable para cumplir metas personales y profesionales.
+
+2. 🎯 Objetivos
+Gestionar tareas con objetivos diarios/semanales.
+
+Usar la técnica Pomodoro para mejorar la concentración.
+
+Recompensar visualmente a los usuarios cada vez que completen una tarea o pomodoro.
+
+Mantener una UI moderna y oscura (dark mode), con colores negro y #f0f0f0.
+
+Ejecutable directamente en Replit con pila de tecnologías simples (HTML/CSS/JS, y opcionalmente un backend ligero con Node.js y SQLite).
+
+3. 🧑‍💻 Público objetivo
+Estudiantes, freelancers y profesionales que buscan herramientas minimalistas para enfocarse.
+
+Personas con TDAH o quienes se benefician de refuerzos positivos para cumplir tareas.
+
+Early adopters de apps de productividad y tecnología.
+
+4. ⚙️ Funcionalidades principales
+4.1 Gestión de Tareas
+Añadir/editar/eliminar tareas.
+
+Asignar tareas a objetivos diarios o semanales.
+
+Marcar tareas como completadas.
+
+4.2 Técnica Pomodoro
+Temporizador 25/5 (25 min trabajo, 5 min descanso) ajustable.
+
+Contador visual de pomodoros realizados por día.
+
+Notificación al finalizar el tiempo.
+
+4.3 Recompensas Dopamina
+Animaciones visuales o efectos cuando se completa una tarea o pomodoro.
+
+Sistema de puntos gamificado (opcional).
+
+Frases motivacionales y visual feedback (tipo "well done!" + animación).
+
+4.4 UI/UX
+Tema oscuro: fondo negro (#000), texto claro (#f0f0f0).
+
+Diseño minimalista y móvil-responsivo.
+
+Interacciones suaves con animaciones CSS.
+
+5. 📦 MVP (Producto Mínimo Viable)
+Tareas CRUD.
+
+Temporizador Pomodoro funcional.
+
+Efecto de "recompensa visual" al completar tarea o sesión.
+
+Diseño base con colores y estilos definidos.
+
+6. 🧱 Stack Tecnológico (para REPLIT)
+Frontend: HTML5, CSS3, JavaScript (Vanilla o con React.js).
+
+Backend (opcional): Node.js con Express y SQLite (para persistencia).
+
+Almacenamiento alternativo: localStorage si no se desea backend.
+
+Replit hosting: Puede usar index.html + main.js directamente, o un servidor Express básico.
+
+7. 🗺️ Roadmap sugerido
+Semana	Tarea
+1	Estructura base del proyecto y diseño UI
+2	Implementar gestor de tareas
+3	Agregar Pomodoro funcional
+4	Añadir efectos de recompensa
+5	Mejoras visuales y ajustes de UX
+6	Pruebas, feedback y refinamiento
+
+8. 🎨 Diseño UI (colores y estilos)
+Fondo: #000000
+
+Texto: #f0f0f0
+
+Botones y destacados: #00ffcc, #ff4081 (colores pastel neón)
+
+Fuente recomendada: Inter, Roboto o Montserrat.
+
+9. 🔗 Referencias / Inspiración
+Todoist
+
+Pomofocus.io
+
+Habitica
+
+10. 🚀 Entregables esperados
+Código fuente funcional en Replit.
+
+App web responsive y navegable.
+
+README explicando cómo usar y ejecutar.
+

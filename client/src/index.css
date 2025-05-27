@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%; /* #000000 */
+  --foreground: 0 0% 94.1%; /* #f0f0f0 */
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 64.9%;
+  --popover: 0 0% 6.7%; /* #111111 */
+  --popover-foreground: 0 0% 94.1%;
+  --card: 0 0% 10.2%; /* #1a1a1a */
+  --card-foreground: 0 0% 94.1%;
+  --border: 0 0% 15.9%;
+  --input: 0 0% 15.9%;
+  --primary: 174 100% 50%; /* #00ffcc neon-teal */
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 15.9%;
+  --secondary-foreground: 0 0% 94.1%;
+  --accent: 334 100% 63.1%; /* #ff4081 neon-pink */
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 174 100% 50%;
+  --radius: 0.5rem;
+  
+  /* Custom DopaTasks colors */
+  --neon-teal: 174 100% 50%; /* #00ffcc */
+  --neon-pink: 334 100% 63.1%; /* #ff4081 */
+  --dark-card: 0 0% 10.2%; /* #1a1a1a */
+}
+
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 94.1%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 64.9%;
+  --popover: 0 0% 6.7%;
+  --popover-foreground: 0 0% 94.1%;
+  --card: 0 0% 10.2%;
+  --card-foreground: 0 0% 94.1%;
+  --border: 0 0% 15.9%;
+  --input: 0 0% 15.9%;
+  --primary: 174 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 15.9%;
+  --secondary-foreground: 0 0% 94.1%;
+  --accent: 334 100% 63.1%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 174 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .neon-teal {
+    color: hsl(var(--neon-teal));
+  }
+  
+  .neon-pink {
+    color: hsl(var(--neon-pink));
+  }
+  
+  .bg-neon-teal {
+    background-color: hsl(var(--neon-teal));
+  }
+  
+  .bg-neon-pink {
+    background-color: hsl(var(--neon-pink));
+  }
+  
+  .border-neon-teal {
+    border-color: hsl(var(--neon-teal));
+  }
+  
+  .border-neon-pink {
+    border-color: hsl(var(--neon-pink));
+  }
+
+  .timer-glow {
+    box-shadow: 0 0 30px hsl(var(--neon-pink) / 0.3);
+  }
+  
+  .task-complete {
+    animation: taskComplete 0.6s ease-out;
+  }
+  
+  @keyframes taskComplete {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .reward-explosion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--x), var(--y)) scale(0);
+      opacity: 0;
+    }
+  }
+}
